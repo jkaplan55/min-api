@@ -397,7 +397,7 @@ class atom_reference
         }
         return v;
     }
-    
+
     operator vector<number>() const
     {
         vector<number> v(m_ac);
@@ -406,7 +406,7 @@ class atom_reference
         }
         return v;
     }
-    
+
     operator vector<symbol>() const
     {
         vector<symbol> v(m_ac);
