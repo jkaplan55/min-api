@@ -398,6 +398,24 @@ class atom_reference
         return v;
     }
 
+    operator vector<number>() const
+    {
+        vector<number> v(m_ac);
+        for (auto i = 0; i < m_ac; ++i) {
+            v[i] = static_cast<number>(atom_getfloat(m_av + i));
+        }
+        return v;
+    }
+
+    operator vector<symbol>() const
+    {
+        vector<symbol> v(m_ac);
+        for (auto i = 0; i < m_ac; ++i) {
+            v[i] = static_cast<symbol>(atom_getsym(m_av + i));
+        }
+        return v;
+    }
+
   private:
     long m_ac;
     max::t_atom* m_av;
