@@ -411,7 +411,7 @@ class atom_reference
     {
         vector<symbol> v(m_ac);
         for (auto i = 0; i < m_ac; ++i) {
-            v[i] = static_cast<number>(atom_getsym(m_av + i));
+            v[i] = static_cast<symbol>(atom_getsym(m_av + i));
         }
         return v;
     }
